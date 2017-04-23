@@ -30,7 +30,7 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 
     if user
-
+      can :show, :dashboard
     end
   end
 end

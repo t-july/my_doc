@@ -1,0 +1,8 @@
+<% flash.each do |name, msg| %>
+  <% if msg.present? %>
+    <div class="alert alert-flash alert-flash-<%= name %>">
+      <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
