@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :documents
+  resources :documents do
+    get 'fill', on: :member
+  end
 
   devise_for :users
 

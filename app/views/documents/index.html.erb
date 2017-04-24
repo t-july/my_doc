@@ -15,6 +15,7 @@
         <td><%= document.name %></td>
         <td><%= document.description %></td>
         <td>
+          <%= link_to 'Заполнить', fill_document_path(document) %>
           <%= link_to 'Show', document %>
           <%= link_to 'Edit', edit_document_path(document) %>
           <%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %>

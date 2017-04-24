@@ -12,6 +12,10 @@ class DocumentsController < ApplicationController
     respond_with(@document)
   end
 
+  def fill
+    respond_with(@document)
+  end
+
   def new
     @document = current_user.documents.build
     respond_with(@document)

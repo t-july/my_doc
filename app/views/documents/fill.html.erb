@@ -1,0 +1,23 @@
+<h2><%= @document.name %></h2>
+
+<%= form_tag do %>
+  <% doc = Nokogiri.XML(@document.schema_file) %>
+
+  <% doc.xpath('.//xs:element').each do |node| %>
+
+    <div class="form-group">
+      <%= label_tag node[:name] %>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <%= text_field_tag node[:name], nil, class: 'form-control' %>
+        </div>
+        <div class="col-sm-6">
+          <%= node.xpath('./xs:annotation/xs:documentation').text %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+<% end %>
