@@ -30,6 +30,8 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 
     if user
+      can :manage, Document, user_id: user.id
+
       can :show, :dashboard
     end
   end

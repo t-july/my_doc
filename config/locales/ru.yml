@@ -1,5 +1,12 @@
 ru:
   activerecord:
+    models:
+      user: Пользователь
+      document: Документ
     attributes:
       user:
         name: Имя
+      document:
+        name: Название
+        description: Описание
+        schema_file: Файл XSD

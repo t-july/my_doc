@@ -14,6 +14,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'cancancan', '~> 1.10'
 
+gem 'rchardet'
 gem 'nokogiri'
 gem 'xsd-reader'
 gem 'xsd-populator'
